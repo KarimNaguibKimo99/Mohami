@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "1ce73566-7cce-4f9c-9a20-0f37491b4252",
+		"name": "Lawyer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "lawyer",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget_password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|2GnFsV4EwPqqeiDmXm1eJttK2oSQjfbrIgyv3ffo",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mahmoud.kssab58@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/forget_password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"forget_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|2GnFsV4EwPqqeiDmXm1eJttK2oSQjfbrIgyv3ffo",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pin_code",
+									"value": "6915",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/change_password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"change_password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Main",
+			"item": [
+				{
+					"name": "add client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|foKAUtd0fvUoNWwiFygGlvrowcyGxoVyZ0127u03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "kssab",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mahmoud.kssab58@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "011",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Elmarj",
+									"type": "text"
+								},
+								{
+									"key": "type_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/add_client",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"add_client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|foKAUtd0fvUoNWwiFygGlvrowcyGxoVyZ0127u03",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/types",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search with name in client",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|foKAUtd0fvUoNWwiFygGlvrowcyGxoVyZ0127u03",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/search_client?client_name=م",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"search_client"
+							],
+							"query": [
+								{
+									"key": "client_name",
+									"value": "م"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|foKAUtd0fvUoNWwiFygGlvrowcyGxoVyZ0127u03",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "1997-2-3",
+									"type": "text"
+								},
+								{
+									"key": "hour",
+									"value": "5.5",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "مصر الجديده",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/lawyer/send_session/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"lawyer",
+								"send_session",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
